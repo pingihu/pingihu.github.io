@@ -48,7 +48,7 @@
 </head>
 <body>
 	<div class="container-fluid" style="margin:0px !important;padding:0px !important">
-	<div class="floater">
+	<div class="floater" id="overlaydiv">
 		<p class="floatytext">PING HU</p>
 		<p class="describetext" id="hat"></p>
 	</div>
@@ -103,7 +103,7 @@
 	$('#f1').waypoint(function(direction) {
 		changeDescription("f1");
 		if (direction == "down"){
-			document.getElementById("floater").innerHTML += '<i class="fa fa-chevron-down"></i>';
+			document.getElementById("overlaydiv").innerHTML += '<i class="fa fa-chevron-down"></i>';
 		}
 	}, {offset:'50%'});
 	$('#f2').waypoint(function(direction) {
