@@ -66,6 +66,8 @@
 
 	<!-- javascript/jQuery below -->
 	<script>
+
+
 	// HEIGHT OF DA WINDOW
 
 	function setFeatureHeight() {
@@ -91,12 +93,18 @@
 			newText = document.createElement("A");
 			newText.href = "resume.pdf";
 			newText.appendChild(resumeText);
+		} else if (location == "0") {
+			newText = document.createElement("I");
+			newText.className = "fa fa-chevron-down";
 		}
 		document.getElementById("hat").appendChild(newText);
 
 	}
 
 	setFeatureHeight();
+	//Add the arrow first.
+	$(document).ready(changeDescription("0"););
+
 	$('#f1').waypoint(function(direction) {
 	changeDescription("f1");
 	}, {offset:'50%'});
