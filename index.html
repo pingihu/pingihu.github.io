@@ -84,18 +84,18 @@
 		document.getElementById("hat").appendChild(newText);
 	}
 
-	$('#f1').waypoint(function(direction) {
+	$('#f1').waypoint(function() {
     	changeDescription("f1");
-	});
-	$('#f2').waypoint(function(direction) {
+	}, { offset: 'bottom-in-view' });
+	$('#f2').waypoint(function() {
     	changeDescription("f2");
-	});
-	$('#f3').waypoint(function(direction) {
+	}, { offset: 'bottom-in-view' });
+	$('#f3').waypoint(function() {
     	changeDescription("f3");
-	});
-	$('#f4').waypoint(function(direction) {
+	}, { offset: 'bottom-in-view' });
+	$('#f4').waypoint(function() {
     	changeDescription("f4");
-	});
+	}, { offset: 'bottom-in-view' });
 
 	</script>
 
