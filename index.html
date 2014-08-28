@@ -7,6 +7,7 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
 	<style>
 	 .featurette {
+	 	overflow: hidden;
 	 	width:100%;
 	 	margin:0px;
 	 	padding:0px;
@@ -63,7 +64,7 @@
 	<!-- javascript/jQuery below -->
 	<script>
 	// HEIGHT OF DA WINDOW
-	var windowHeight = $(window).height();
+	var windowHeight = $(window).height().toString() + "px!important";
 
 	$(".featurette").css("height", windowHeight);
 	
