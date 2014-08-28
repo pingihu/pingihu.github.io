@@ -89,26 +89,26 @@
 	setFeatureHeight();
 	$('#f1').waypoint(function(direction) {
 	changeDescription("f1");
-	}, {offset:'100%'});
+	}, {offset:'50%'});
 	$('#f2').waypoint(function(direction) {
     	changeDescription("f2");
     	if (direction == "up"){
     		changeDescription("f1");
     	}
-	}, {offset:'100%'});
+	}, {offset:'50%'});
 	$('#f3').waypoint(function(direction) {
     	changeDescription("f3");
     	if (direction == "up"){
     		changeDescription("f2");
     	}
-	}, {offset:'100%'});
+	}, {offset:'50%'});
 	$('#f4').waypoint(function(direction) {
     	changeDescription("f4");
     	if (direction == "up"){
     		changeDescription("f3");
     	}
 
-	}, {offset:'100%'});
+	}, {offset:'50%'});
 
 	// Change featurette height whenever resize happens
 	$(window).resize(function() {
