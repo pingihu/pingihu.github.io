@@ -7,7 +7,6 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
 	<style>
 	 .featurette {
-	 	overflow:hidden;
 	 	width:100%;
 	 	margin:0px;
 	 	padding:0px;
@@ -84,16 +83,16 @@
 		document.getElementById("hat").appendChild(newText);
 	}
 
-	$('#f1').waypoint(function() {
+	$('#f1').waypoint(function(direction) {
     	changeDescription("f1");
 	}, {offset:'50%'});
-	$('#f2').waypoint(function() {
+	$('#f2').waypoint(function(direction) {
     	changeDescription("f2");
 	}, {offset:'50%'});
-	$('#f3').waypoint(function() {
+	$('#f3').waypoint(function(direction) {
     	changeDescription("f3");
 	}, {offset:'50%'});
-	$('#f4').waypoint(function() {
+	$('#f4').waypoint(function(direction) {
     	changeDescription("f4");
 	}, {offset:'50%'});
 
