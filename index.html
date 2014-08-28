@@ -58,6 +58,8 @@
 	</div>
 	<div class="featurette" id="f4" style="background:#DB8C02">
 	</div>
+	<div class="featurette" id="f5" style="background:#000000">
+	</div>
 	</div>
 
 	<!-- javascript/jQuery below -->
@@ -86,11 +88,21 @@
 		document.getElementById("hat").appendChild(newText);
 	}
 
+	//Sets behavior for reaching different waypoints.
+	function setWaypointBehavior(featureAt, featureBefore){
+		$(featureAt).waypoint(function(direction) {
+	    	changeDescription(featureAt);
+	    	if (direction == "up"){
+	    		changeDescription(featureBefore);
+	    	}
+		}, {offset:'50%'});
+	}
+
 	setFeatureHeight();
 	$('#f1').waypoint(function(direction) {
 	changeDescription("f1");
 	}, {offset:'50%'});
-	$('#f2').waypoint(function(direction) {
+	/*$('#f2').waypoint(function(direction) {
     	changeDescription("f2");
     	if (direction == "up"){
     		changeDescription("f1");
@@ -108,7 +120,10 @@
     		changeDescription("f3");
     	}
 
-	}, {offset:'50%'});
+	}, {offset:'50%'});*/
+	setWaypointBehavior("f2","f1");
+	setWaypointBehavior("f3","f2");
+	setWaypointBehavior("f4","f3");
 
 	// Change featurette height whenever resize happens
 	$(window).resize(function() {
