@@ -63,9 +63,12 @@
 	<!-- javascript/jQuery below -->
 	<script>
 	// HEIGHT OF DA WINDOW
-	var windowHeight = $(window).height().toString() + "px!important";
+
+	function setFeatureHeight() {
+	var windowHeight = $(window).height().toString() + "px";
 
 	$(".featurette").css("height", windowHeight);
+	}
 	
 	// Changes describetext
 	function changeDescription(location) {
@@ -83,19 +86,24 @@
 		document.getElementById("hat").appendChild(newText);
 	}
 
-	$('#f1').waypoint(function(direction) {
+	$(document).ready(function(){
+		setFeatureHeight();
+		$('#f1').waypoint(function(direction) {
     	changeDescription("f1");
-	}, {offset:'50%'});
-	$('#f2').waypoint(function(direction) {
-    	changeDescription("f2");
-	}, {offset:'50%'});
-	$('#f3').waypoint(function(direction) {
-    	changeDescription("f3");
-	}, {offset:'50%'});
-	$('#f4').waypoint(function(direction) {
-    	changeDescription("f4");
+		}, {offset:'50%'});
+		$('#f2').waypoint(function(direction) {
+	    	changeDescription("f2");
+		}, {offset:'50%'});
+		$('#f3').waypoint(function(direction) {
+	    	changeDescription("f3");
+		}, {offset:'50%'});
+		$('#f4').waypoint(function(direction) {
+	    	changeDescription("f4");
 
-	}, {offset:'50%'});
+		}, {offset:'50%'});
+	})
+
+	
 
 	</script>
 
