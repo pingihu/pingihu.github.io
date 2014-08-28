@@ -20,12 +20,12 @@
 	 	color:#fff;
 	 	position:fixed;
 	 	top:40%;
-	 	right:35%;
+	 	right:38%;
 	 }
 	 p.describetext {
 	 	font-family:'Lato', sans-serif;
 	 	font-weight:400px;
-	 	position:relative;
+	 	position:fixed;
 	 	top:70%;
 	 	color:#fff;
 	 }
@@ -42,7 +42,6 @@
 	<div class="container-fluid" style="margin:0px !important;padding:0px !important">
 	<p class="floatytext">PING HU</p>
 	<div class="featurette" style="background:#0E4191;">
-		<p class="describetext">B.Sc. Computer Science</p>
 	</div>
 	<div class="featurette" style="background:#DB5A02;">
 	</div>
@@ -54,7 +53,7 @@
 
 	<!-- javascript/jQuery below -->
 	<script>
-	$('.floatytext').waypoint('sticky');
+	$('.floatytext').waypoint(function(){alert("something happened");});
 	</script>
 
 </body>
