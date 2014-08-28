@@ -86,22 +86,20 @@
 		document.getElementById("hat").appendChild(newText);
 	}
 
-	$(document).ready(function(){
-		setFeatureHeight();
-		$('#f1').waypoint(function(direction) {
-    	changeDescription("f1");
-		}, {offset:'50%'});
-		$('#f2').waypoint(function(direction) {
-	    	changeDescription("f2");
-		}, {offset:'50%'});
-		$('#f3').waypoint(function(direction) {
-	    	changeDescription("f3");
-		}, {offset:'50%'});
-		$('#f4').waypoint(function(direction) {
-	    	changeDescription("f4");
+	setFeatureHeight();
+	$('#f1').waypoint(function(direction) {
+	changeDescription("f1");
+	}, {offset:'50%'});
+	$('#f2').waypoint(function(direction) {
+    	changeDescription("f2");
+	}, {offset:'50%'});
+	$('#f3').waypoint(function(direction) {
+    	changeDescription("f3");
+	}, {offset:'50%'});
+	$('#f4').waypoint(function(direction) {
+    	changeDescription("f4");
 
-		}, {offset:'50%'});
-	})
+	}, {offset:'50%'});
 
 	
 
