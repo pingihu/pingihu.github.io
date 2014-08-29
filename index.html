@@ -48,7 +48,7 @@
 <body>
 	<div class="container-fluid" style="margin:0px !important;padding:0px !important">
 	<div class="floater" id="overlaydiv">
-		<p class="floatytext">PING HU</p>
+		<p class="floatytext" id="title">PING HU</p>
 		<p class="describetext" id="hat"></p>
 		<span id="arrow" class="glyphicon glyphicon-chevron-down" style="color:#fff;size:50px;position:absolute;top:96%"></span>
 	</div>
@@ -60,8 +60,8 @@
 	</div>
 	<div class="featurette" id="f4" style="background:#DB8C02">
 	</div>
-	<!--<div class="featurette" id="f5" style="background:#000000">
-	</div>-->
+	<div class="featurette" id="f5" style="background:#000000">
+	</div>
 	</div>
 
 	<!-- javascript/jQuery below -->
@@ -90,10 +90,13 @@
 		} else if (location == "f4") {
 			newText = document.createTextNode("Intro CS TA, Spring and Fall 2014");
 		} else if (location == "f5") {
-			var resumeText = document.createTextNode("resume")
-			newText = document.createElement("A");
-			newText.href = "resume.pdf";
-			newText.appendChild(resumeText);
+			var user = "ping_hu";
+			var address = "brown.edu"
+			newText = document.createTextNode(user + "@" + address);
+			var contactText = document.createTextNode("GET IN TOUCH")
+			contactText.css("color","#EFBBCC");
+			document.getElementById("title").innerHTML = "";
+			document.getElementById("title").appendChild(contactText);
 		}
 		document.getElementById("hat").appendChild(newText);
 
@@ -129,13 +132,13 @@
     	}
 
 	}, {offset:'50%'});
-	/*$('#f5').waypoint(function(direction) {
+	$('#f5').waypoint(function(direction) {
     	changeDescription("f5");
     	if (direction == "up"){
     		changeDescription("f4");
     	}
 
-	}, {offset:'50%'});*/
+	}, {offset:'50%'});
 
 	// Change featurette height whenever resize happens
 	$(window).resize(function() {
