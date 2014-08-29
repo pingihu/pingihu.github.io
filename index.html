@@ -48,7 +48,7 @@
 <body>
 	<div class="container-fluid" style="margin:0px !important;padding:0px !important">
 	<div class="floater" id="overlaydiv">
-		<p class="floatytext" id="title"></p>
+		<p class="floatytext" id="title">PING HU</p>
 		<p class="describetext" id="hat"></p>
 		<span id="arrow" class="glyphicon glyphicon-chevron-down" style="color:#fff;size:50px;position:absolute;top:96%"></span>
 	</div>
@@ -79,9 +79,7 @@
 	// Changes describetext
 	function changeDescription(location) {
 		document.getElementById("hat").innerHTML = "";
-		document.getElementById("title").innerHTML = "";
 		var newText;
-		var titleText = document.createTextNode("PING HU");
 		if (location == "f1") {
 			newText = document.createTextNode("B.Sc. Computer Science, May 2017");
 		} else if (location == "f2") {
@@ -95,10 +93,9 @@
 			var user = "ping_hu";
 			var address = "brown.edu"
 			newText = document.createTextNode(user + "@" + address);
-			titleText = document.createTextNode("GET IN TOUCH");
-			titleText.css("color","#EFBBCC");
+			//titleText = document.createTextNode("GET IN TOUCH");
+			//titleText.css("color","#EFBBCC");
 		}
-		document.getElementById("title").appendChild(titleText);
 		document.getElementById("hat").appendChild(newText);
 
 	}
