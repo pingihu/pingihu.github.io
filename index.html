@@ -88,6 +88,8 @@
 	function changeDescription(location) {
 		document.getElementById("hat").innerHTML = "";
 		document.getElementById("title").innerHTML = "";
+		document.getElementById("hat").setAttribute("style", "color:#FFFFFF!important");
+		document.getElementById("title").setAttribute("style", "color:#FFFFFF!important");
 		var newText;
 		var titleText = document.createTextNode("PING HU");
 		if (location == "f1") {
@@ -100,8 +102,10 @@
 		} else if (location == "f4") {
 			newText = document.createTextNode("Intro CS TA, Spring and Fall 2014");
 		} else if (location == "f5") {
+			// Pink colored text
 			titleText = document.createTextNode("GET IN TOUCH");
 			document.getElementById("title").setAttribute("style", "color:#EFBBCC!important");
+			document.getElementById("hat").setAttribute("style", "color:#FFFFFF!important");
 			// Email
 			var user = "ping_hu";
 			var address = "brown.edu";
