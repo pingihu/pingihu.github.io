@@ -75,11 +75,21 @@
 
 	$(".featurette").css("height", windowHeight);
 	}
+
+	// Changes floatytext
+	function changeTitle(title) {
+		document.getElementById("title").innerHTML = "";
+		var titleText;
+		titleText = document.createTextNode(title);
+		document.getElementById("title").appendChild(titleText);
+	}
 	
 	// Changes describetext
 	function changeDescription(location) {
 		document.getElementById("hat").innerHTML = "";
+		document.getElementById("title").innerHTML = "";
 		var newText;
+		var titleText = document.createTextNode("PING HU");
 		if (location == "f1") {
 			newText = document.createTextNode("B.Sc. Computer Science, May 2017");
 		} else if (location == "f2") {
@@ -90,11 +100,15 @@
 		} else if (location == "f4") {
 			newText = document.createTextNode("Intro CS TA, Spring and Fall 2014");
 		} else if (location == "f5") {
+			titleText = document.createTextNode("GET IN TOUCH");
+			titleText.css("color", "#EFBBCC");
+			// Email
 			var user = "ping_hu";
 			var address = "brown.edu";
 			newText = document.createTextNode(user + "@" + address);
 		}
 		document.getElementById("hat").appendChild(newText);
+		document.getElementById("title").appendChild(titleText);
 
 	}
 
